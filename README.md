@@ -268,6 +268,3 @@ If you found this PyTorch diffusion tutorial helpful for learning generative AI 
 
 **Built with ❤️ 🦾 for the PyTorch & AI community by [Tarun Reddy Nukala](https://github.com/tr-nukala)**  
 *Educational Diffusion Models Tutorial | PyTorch ATX Meetup 2025*
-
-<!-- ### Related Repositories & Tutorials
-**Generative AI** • **PyTorch Tutorials** • **Computer Vision** • **Machine Learning Education** • **Diffusion Models** • **Apple Silicon Optimization** -->
