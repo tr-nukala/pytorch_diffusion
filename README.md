@@ -40,8 +40,8 @@ Unlike full DDPM implementations, this version predicts the clean image directly
 ### Option 1: Quick Setup (Recommended)
 
 ```bash
-git clone https://github.com/tr-nukala/pytorch_diffusion_demo.git
-cd pytorch_diffusion_demo
+git clone https://github.com/tr-nukala/pytorch_diffusion.git
+cd pytorch_diffusion
 ./setup.sh
 ```
 
@@ -133,7 +133,7 @@ Open `notebooks/Diffusion_Demo_Clean.ipynb` and run the cells step-by-step.
 ## 🗂️  Project Structure
 
 ```
-pytorch_diffusion_demo/
+pytorch_diffusion/
 ├── README.md                              # This file  
 ├── LICENSE                                # MIT license
 ├── requirements.txt                       # Python dependencies
@@ -181,8 +181,8 @@ If you just want to see it work:
 pip install torch torchvision matplotlib numpy jupyter
 
 # Clone and run
-git clone https://github.com/tr-nukala/pytorch_diffusion_demo.git
-cd pytorch_diffusion_demo
+git clone https://github.com/tr-nukala/pytorch_diffusion.git
+cd pytorch_diffusion
 
 # Download model (choose one method)
 python download_model.py              # Cross-platform
