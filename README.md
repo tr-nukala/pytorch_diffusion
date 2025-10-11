@@ -84,15 +84,19 @@ Open `notebooks/Diffusion_Demo_Clean.ipynb` and run the cells step-by-step.
 
 ```
 pytorch_diffusion_demo/
-├── README.md              # This file
-├── LICENSE               # MIT license
-├── requirements.txt      # Python dependencies
-├── .gitignore           # Git ignore rules
+├── README.md                              # This file
+├── LICENSE                                # MIT license
+├── requirements.txt                       # Python dependencies
+├── setup.sh                               # Quick setup script
+├── .gitignore                             # Git ignore rules
+├── notebooks/
+│   └── Diffusion_Demo_Clean.ipynb         # Main interactive demo
 └── src/
-    ├── diffusion.py         # Core diffusion functions
-    ├── model.py             # U-Net architecture
-    ├── Diffusion_Demo_Clean.ipynb  # Main demo notebook
-    └── outputs/             # Generated sample images
+    ├── diffusion.py                       # Core diffusion functions
+    ├── model.py                           # U-Net architecture
+    ├── outputs/                           # Generated sample images
+    └── models/                            # Model files (excluded from git)
+        └── README.md                      # Model documentation
 ```
 
 ## 🖼 Example Output

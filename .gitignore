@@ -3,6 +3,10 @@
 .AppleDouble
 .LSOverride
 
+# Archive and draft files
+archive/
+drafts/
+
 # Python
 __pycache__/
 *.py[cod]
