@@ -6,6 +6,8 @@
 
 A minimal implementation of a denoising diffusion model using PyTorch, presented at the PyTorch ATX Meetup. This educational demo shows how a simple U-Net can learn to reverse the diffusion process on MNIST digits.
 
+**Built on Apple Silicon** with automatic device detection (MPS → CUDA → CPU).
+
 ![Denoising Progression](src/outputs/denoised_progression_padded.png)
 
 ## 🧠 What This Is
@@ -22,14 +24,15 @@ Unlike full DDPM implementations, this version predicts the clean image directly
 - **Simple & Educational**: Clean PyTorch implementation focused on learning
 - **Direct x₀ Prediction**: Predicts clean images instead of noise for easier interpretation  
 - **Interactive Notebook**: Step-by-step Jupyter notebook with explanations
+- **Cross-Platform**: Optimized for Apple Silicon (MPS), with CUDA and CPU fallbacks
 - **Visualization**: Shows denoising progression at different noise levels
-- **Fast Training**: Trains quickly on MNIST for demonstration purposes
+- **Fast Training**: Trains quickly on MNIST (~2-3 mins on Apple Silicon)
 
 ## 📋 Requirements
 
 - Python 3.8 or higher
-- PyTorch 1.13+ (CPU or GPU)
-- 4GB+ RAM recommended
+- PyTorch 1.13+ (supports Apple Silicon MPS, CUDA, or CPU)
+- 4GB+ RAM recommended (8GB+ for Apple Silicon recommended)
 - Jupyter Notebook for interactive demo
 
 ## 🛠 Installation & Setup
@@ -139,9 +142,12 @@ jupyter notebook Diffusion_Demo_Clean.ipynb
 **Common Issues:**
 
 - **ImportError**: Make sure you're in the activated virtual environment
-- **CUDA errors**: The code works on CPU - PyTorch will automatically fallback  
-- **Memory issues**: Reduce batch size in the notebook if needed
-- **Slow training**: Normal on CPU, consider using GPU for faster training
+- **Device errors**: The code automatically detects MPS (Apple Silicon) → CUDA → CPU
+- **Memory issues**: Reduce batch size in the notebook if needed  
+- **Slow training**: 
+  - **Apple Silicon**: ~2-3 minutes with MPS acceleration
+  - **CUDA GPU**: ~1-2 minutes  
+  - **CPU only**: ~5-10 minutes (still very doable!)
 
 ## 🤝 Contributing
 

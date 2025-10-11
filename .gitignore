@@ -46,10 +46,10 @@ venv.bak/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 
-# PyTorch model files (large files)
-*.pth
-*.pkl
-*.pt
+# PyTorch model files (uncomment to exclude large models)
+# *.pth
+# *.pkl
+# *.pt
 
 # Data directories
 /src/data/

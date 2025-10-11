@@ -6,15 +6,23 @@ This directory contains trained PyTorch model files.
 
 - **Size**: ~7.5MB
 - **Description**: Pre-trained U-Net model for MNIST denoising
-- **Status**: Excluded from git (see .gitignore)
+- **Status**: Included for demo purposes
 
-## Training Your Own Model
+## Using the Pre-trained Model
 
-The model file is excluded from version control due to its size. To train your own model:
+The model is ready to use! You can:
+
+1. **Run inference directly** using the existing model
+2. **Train your own model** to see the process
+
+To train a new model:
 
 1. Run the notebook: `notebooks/Diffusion_Demo_Clean.ipynb`
 2. The training section will create a new `unet_denoiser.pth` file
-3. Training takes approximately 5-10 minutes on a modern CPU
+3. Training time varies by device:
+   - **Apple Silicon (MPS)**: ~2-3 minutes  
+   - **NVIDIA GPU (CUDA)**: ~1-2 minutes
+   - **CPU**: ~5-10 minutes
 
 ## Model Architecture
 
@@ -23,13 +31,11 @@ The model file is excluded from version control due to its size. To train your o
 - Output: Denoised 28x28 grayscale images
 - Parameters: ~470K parameters
 
-## Alternative: Download Pre-trained Model
+## Model Performance
 
-If you prefer to use the pre-trained model without training:
+This pre-trained model demonstrates:
+- Fast denoising of MNIST digits
+- Good reconstruction quality at low noise levels (t=10, t=30)
+- Educational insight into diffusion model capabilities
 
-```bash
-# This would be a download script if the model were hosted externally
-# wget https://example.com/models/unet_denoiser.pth
-```
-
-*Note: Currently, you'll need to train the model yourself using the notebook.*
+*Note: This is a demonstration model optimized for learning, not production use.*
