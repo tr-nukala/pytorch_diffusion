@@ -12,21 +12,26 @@ A **minimal implementation of denoising diffusion probabilistic models (DDPM)** 
 
 **Optimized for Apple Silicon** with automatic device detection (MPS → CUDA → CPU) and cross-platform compatibility.
 
-## 🎯 **Keywords**: Deep Learning, Generative AI, Computer Vision, Machine Learning Tutorial, PyTorch Tutorial, Diffusion Models, U-Net, MNIST, Apple Silicon, MPS Acceleration
 
-![Denoising Progression](src/outputs/denoised_progression_padded.png)
+<!-- <p align="center">
+  <img src="src/outputs/denoised_progression_padded.png" alt="Denoising Progression" width="800"/>
+</p> -->
 
-## 🧠 What This Is
+### 🔍 **Example: Original → Noisy → Denoised**
+![Input Output Example](src/outputs/example_input_output_t50.png)  
+*See how the model transforms a heavily noised MNIST digit (t=50) back to a clean, recognizable number*
+
+## What This Is
 
 This repository provides a **complete educational journey into diffusion models** and generative AI:
 
-### 📚 **Learn Diffusion Models From Scratch**
+### **Learn Diffusion Models From Scratch**
 - **Simplified DDPM Implementation**: U-Net architecture that predicts clean images (`x₀`) directly from noisy inputs (`xₜ`)
 - **Mathematical Foundation**: Linear noise schedule over T timesteps with clear mathematical explanations
 - **Code Walkthrough**: Under 150 lines of well-commented PyTorch code showing core diffusion concepts
 - **Interactive Learning**: Jupyter notebooks with step-by-step explanations and visualizations
 
-### 🎓 **Perfect for Students & Researchers**
+### **Perfect for Students & Researchers**
 - **Computer Vision**: Understand how generative models work in image processing
 - **Deep Learning**: See U-Net architecture applied to generative tasks
 - **PyTorch Tutorial**: Learn modern PyTorch patterns with MPS/CUDA optimization
@@ -34,7 +39,7 @@ This repository provides a **complete educational journey into diffusion models*
 
 Unlike complex DDPM implementations, this version predicts clean images directly rather than noise, making the mathematical concepts more intuitive and easier to visualize.
 
-## 🚀 Features
+## Features
 
 - **Simple & Educational**: Clean PyTorch implementation focused on learning
 - **Direct x₀ Prediction**: Predicts clean images instead of noise for easier interpretation  
@@ -43,14 +48,14 @@ Unlike complex DDPM implementations, this version predicts clean images directly
 - **Visualization**: Shows denoising progression at different noise levels
 - **Fast Training**: Trains quickly on MNIST (~2-3 mins on Apple Silicon)
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8 or higher
 - PyTorch 1.13+ (supports Apple Silicon MPS, CUDA, or CPU)
 - 4GB+ RAM recommended (8GB+ for Apple Silicon recommended)
 - Jupyter Notebook for interactive demo
 
-## 🛠 Installation & Setup
+## Installation & Setup
 
 ### Option 1: Quick Setup (Recommended)
 
@@ -145,7 +150,7 @@ jupyter lab
 
 Open `notebooks/Diffusion_Demo_Clean.ipynb` and run the cells step-by-step.
 
-## 🗂️  Project Structure
+## Project Structure
 
 ```
 pytorch_diffusion/
@@ -166,15 +171,15 @@ pytorch_diffusion/
         └── README.md                      # Model documentation
 ```
 
-## 🖼 Example Output
+## Example Output
 
 The trained model can reconstruct MNIST digits from various noise levels:
 
 | Noise Level | Quality | Description |
 |-------------|---------|-------------|
-| t=10 | ✅ Excellent | Very clean reconstruction |
-| t=30 | ✅ Good | Minor artifacts |  
-| t=50 | 🤔 Fair | More noise, still recognizable |
+| t=10 | ✅ ✅ ✅ Excellent | Very clean reconstruction |
+| t=30 | ✅ ✅ Good | Minor artifacts |  
+| t=50 | ✅ Fair | More noise, still recognizable |
 
 ## 🎓 Educational Notes
 
@@ -187,7 +192,7 @@ This implementation makes several simplifications for learning purposes:
 
 For production use, consider more advanced techniques like DDIM, classifier-free guidance, or modern architectures.
 
-## 🚀 Quick Start (Alternative)
+## Quick Start (Alternative)
 
 If you just want to see it work:
 
@@ -208,7 +213,7 @@ python download_model.py              # Cross-platform
 jupyter lab notebooks/Diffusion_Demo_Clean.ipynb
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Common Issues:**
 
@@ -261,8 +266,8 @@ If you found this PyTorch diffusion tutorial helpful for learning generative AI 
 
 ---
 
-**Built with ❤️ for the PyTorch & AI community by [Tarun Reddy Nukala](https://github.com/tr-nukala)**  
+**Built with ❤️ 🦾 for the PyTorch & AI community by [Tarun Reddy Nukala](https://github.com/tr-nukala)**  
 *Educational Diffusion Models Tutorial | PyTorch ATX Meetup 2025*
 
-### Related Repositories & Tutorials
-**Generative AI** • **PyTorch Tutorials** • **Computer Vision** • **Machine Learning Education** • **Diffusion Models** • **Apple Silicon Optimization**
+<!-- ### Related Repositories & Tutorials
+**Generative AI** • **PyTorch Tutorials** • **Computer Vision** • **Machine Learning Education** • **Diffusion Models** • **Apple Silicon Optimization** -->
