@@ -51,8 +51,8 @@ The setup script will create a virtual environment, install dependencies, and ve
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tr-nukala/pytorch_diffusion_demo.git
-   cd pytorch_diffusion_demo
+   git clone https://github.com/tr-nukala/pytorch_diffusion.git
+   cd pytorch_diffusion
    ```
 
 2. **Create and activate virtual environment:**
@@ -73,11 +73,58 @@ The setup script will create a virtual environment, install dependencies, and ve
 
 ### Running the Demo
 
-```bash
-# Activate environment (if not already active)
-source venv/bin/activate
+**Option 1: Use Pre-trained Model (Quick Start)**
 
-# Launch Jupyter
+Choose your preferred download method:
+
+**A) Automated Script (macOS/Linux)**
+```bash
+./download_model.sh
+```
+
+**B) Python Script (Cross-platform)**
+```bash
+python download_model.py
+```
+
+**C) Manual Download**
+1. Go to [Releases](https://github.com/tr-nukala/pytorch_diffusion/releases/latest)
+2. Download `unet_denoiser.pth` 
+3. Place it in `src/models/unet_denoiser.pth`
+
+**E) Command Line (curl)**
+```bash
+curl -L -o src/models/unet_denoiser.pth \
+  https://github.com/tr-nukala/pytorch_diffusion/releases/latest/download/unet_denoiser.pth
+```
+
+**F) Command Line (wget)**
+```bash
+wget -O src/models/unet_denoiser.pth \
+  https://github.com/tr-nukala/pytorch_diffusion/releases/latest/download/unet_denoiser.pth
+```
+
+**G) Python One-liner (cross-platform)**
+```python
+import urllib.request
+import os
+
+os.makedirs("src/models", exist_ok=True)
+url = "https://github.com/tr-nukala/pytorch_diffusion/releases/latest/download/unet_denoiser.pth"
+urllib.request.urlretrieve(url, "src/models/unet_denoiser.pth")
+print("✅ Model downloaded!")
+```
+
+Then launch Jupyter:
+```bash
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+jupyter lab
+```
+
+**Option 2: Train Your Own Model**
+```bash
+# Skip the download, train from scratch in the notebook
+source venv/bin/activate  # On Windows: venv\Scripts\activate  
 jupyter lab
 ```
 
@@ -87,18 +134,20 @@ Open `notebooks/Diffusion_Demo_Clean.ipynb` and run the cells step-by-step.
 
 ```
 pytorch_diffusion_demo/
-├── README.md                              # This file
+├── README.md                              # This file  
 ├── LICENSE                                # MIT license
 ├── requirements.txt                       # Python dependencies
 ├── setup.sh                               # Quick setup script
+├── download_model.sh                      # Download pre-trained model (bash)
+├── download_model.py                      # Download pre-trained model (python)
 ├── .gitignore                             # Git ignore rules
 ├── notebooks/
 │   └── Diffusion_Demo_Clean.ipynb         # Main interactive demo
 └── src/
     ├── diffusion.py                       # Core diffusion functions
-    ├── model.py                           # U-Net architecture
+    ├── model.py                           # U-Net architecture  
     ├── outputs/                           # Generated sample images
-    └── models/                            # Model files (excluded from git)
+    └── models/                            # Model files (download from Releases)
         └── README.md                      # Model documentation
 ```
 
@@ -133,8 +182,15 @@ pip install torch torchvision matplotlib numpy jupyter
 
 # Clone and run
 git clone https://github.com/tr-nukala/pytorch_diffusion_demo.git
-cd pytorch_diffusion_demo/src
-jupyter notebook Diffusion_Demo_Clean.ipynb
+cd pytorch_diffusion_demo
+
+# Download model (choose one method)
+python download_model.py              # Cross-platform
+# OR: ./download_model.sh             # macOS/Linux only  
+# OR: Manual download from Releases
+
+# Launch notebook
+jupyter lab notebooks/Diffusion_Demo_Clean.ipynb
 ```
 
 ## 🐛 Troubleshooting

@@ -4,18 +4,19 @@ This directory contains trained PyTorch model files.
 
 ## unet_denoiser.pth
 
-- **Size**: ~7.5MB
+- **Size**: ~7.5MB  
 - **Description**: Pre-trained U-Net model for MNIST denoising
-- **Status**: Included for demo purposes
+- **Status**: Available as GitHub Release asset (see Releases section)
 
-## Using the Pre-trained Model
+## Getting the Pre-trained Model
 
-The model is ready to use! You can:
+**Option 1: Download from Releases (Recommended)**
+1. Go to [Releases](https://github.com/tr-nukala/pytorch_diffusion/releases)
+2. Download `unet_denoiser.pth` from the latest release
+3. Place it in this `src/models/` directory
 
-1. **Run inference directly** using the existing model
-2. **Train your own model** to see the process
-
-To train a new model:
+**Option 2: Train Your Own**
+Run the notebook to train a fresh model:
 
 1. Run the notebook: `notebooks/Diffusion_Demo_Clean.ipynb`
 2. The training section will create a new `unet_denoiser.pth` file
