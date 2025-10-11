@@ -1,23 +1,38 @@
-# 🧨 PyTorch Diffusion Demo
+# 🧨 PyTorch Diffusion Model Demo | Denoising Diffusion Probabilistic Models (DDPM) Tutorial
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.13+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MPS%20Optimized-green.svg)](https://pytorch.org/docs/stable/notes/mps.html)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](notebooks/Diffusion_Demo_Clean.ipynb)
 
-A minimal implementation of a denoising diffusion model using PyTorch, presented at the PyTorch ATX Meetup. This educational demo shows how a simple U-Net can learn to reverse the diffusion process on MNIST digits.
+A **minimal implementation of denoising diffusion probabilistic models (DDPM)** using PyTorch and U-Net architecture. This educational repository demonstrates how generative AI diffusion models work by training a simple neural network to reverse noise corruption on MNIST handwritten digits.
 
-**Built on Apple Silicon** with automatic device detection (MPS → CUDA → CPU).
+**Perfect for learning**: Understand diffusion models, generative AI, and PyTorch through a complete working example with interactive Jupyter notebooks.
+
+**Optimized for Apple Silicon** with automatic device detection (MPS → CUDA → CPU) and cross-platform compatibility.
+
+## 🎯 **Keywords**: Deep Learning, Generative AI, Computer Vision, Machine Learning Tutorial, PyTorch Tutorial, Diffusion Models, U-Net, MNIST, Apple Silicon, MPS Acceleration
 
 ![Denoising Progression](src/outputs/denoised_progression_padded.png)
 
 ## 🧠 What This Is
 
-This demo implements a **simplified diffusion model** that:
-- Trains a U-Net to predict clean images (`x₀`) directly from noisy inputs (`xₜ`)
-- Uses a linear noise schedule over T timesteps
-- Demonstrates the core concept of diffusion models in under 150 lines of code
+This repository provides a **complete educational journey into diffusion models** and generative AI:
 
-Unlike full DDPM implementations, this version predicts the clean image directly rather than the noise, making it easier to understand and visualize.
+### 📚 **Learn Diffusion Models From Scratch**
+- **Simplified DDPM Implementation**: U-Net architecture that predicts clean images (`x₀`) directly from noisy inputs (`xₜ`)
+- **Mathematical Foundation**: Linear noise schedule over T timesteps with clear mathematical explanations
+- **Code Walkthrough**: Under 150 lines of well-commented PyTorch code showing core diffusion concepts
+- **Interactive Learning**: Jupyter notebooks with step-by-step explanations and visualizations
+
+### 🎓 **Perfect for Students & Researchers**
+- **Computer Vision**: Understand how generative models work in image processing
+- **Deep Learning**: See U-Net architecture applied to generative tasks
+- **PyTorch Tutorial**: Learn modern PyTorch patterns with MPS/CUDA optimization
+- **Machine Learning Research**: Use as foundation for your own diffusion experiments
+
+Unlike complex DDPM implementations, this version predicts clean images directly rather than noise, making the mathematical concepts more intuitive and easier to visualize.
 
 ## 🚀 Features
 
@@ -221,11 +236,33 @@ This is an educational demo, but improvements are welcome! Please:
 - **Educational Resources**: Hugging Face diffusion course, Phil Wang's implementations
 - **U-Net Architecture**: Based on the original U-Net for biomedical image segmentation
 
+## 🏷️ Topics & Keywords
+
+**Primary**: `pytorch` `diffusion-models` `machine-learning` `deep-learning` `generative-ai` `unet` `mnist` `denoising` `computer-vision` `tutorial`
+
+**Technical**: `apple-silicon` `mps-acceleration` `jupyter-notebook` `educational` `ddpm` `generative-models` `pytorch-tutorial` `ai-demo`
+
+**Research**: `denoising-diffusion` `probabilistic-models` `generative-artificial-intelligence` `neural-networks` `image-generation`
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🌟 Star This Repository!
+
+If you found this PyTorch diffusion tutorial helpful for learning generative AI and diffusion models, please ⭐ star this repository to help others discover it!
+
+## 📢 Share & Contribute
+
+- **Share**: Help others learn diffusion models by sharing this repository
+- **Issues**: Report bugs or request features via GitHub Issues
+- **Contributions**: Pull requests welcome for improvements and educational enhancements
+- **Discussions**: Use GitHub Discussions for questions about diffusion models and PyTorch
+
 ---
 
-**Built with ❤️ 🦾 by [Tarun Reddy Nukala](https://github.com/tr-nukala)**  
-*Presented at PyTorch ATX Meetup, 2025*
+**Built with ❤️ for the PyTorch & AI community by [Tarun Reddy Nukala](https://github.com/tr-nukala)**  
+*Educational Diffusion Models Tutorial | PyTorch ATX Meetup 2025*
+
+### Related Repositories & Tutorials
+**Generative AI** • **PyTorch Tutorials** • **Computer Vision** • **Machine Learning Education** • **Diffusion Models** • **Apple Silicon Optimization**

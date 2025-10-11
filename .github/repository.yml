@@ -1,0 +1,38 @@
+name: Educational PyTorch Diffusion Model Demo
+description: A minimal implementation of denoising diffusion probabilistic models (DDPM) using PyTorch. Perfect for learning generative AI, diffusion models, and U-Net architecture. Optimized for Apple Silicon with MPS acceleration.
+
+# Repository topics for GitHub discovery
+topics:
+  - pytorch
+  - diffusion-models  
+  - machine-learning
+  - deep-learning
+  - generative-ai
+  - unet
+  - mnist
+  - denoising
+  - computer-vision
+  - tutorial
+  - apple-silicon
+  - mps-acceleration
+  - jupyter-notebook
+  - educational
+  - ddpm
+  - generative-models
+  - pytorch-tutorial
+  - ai-demo
+
+# SEO and social metadata
+social:
+  title: "PyTorch Diffusion Model Tutorial - Learn DDPM & Generative AI"
+  description: "Complete educational tutorial for understanding diffusion models using PyTorch. Interactive Jupyter notebooks, Apple Silicon optimized, perfect for learning generative AI."
+  image: "src/outputs/denoised_progression_padded.png"
+  
+# Repository categorization
+category: education
+language: Python
+framework: PyTorch
+domain: computer-vision
+use-case: tutorial
+target-audience: students-researchers
+difficulty: beginner-intermediate
