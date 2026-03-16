@@ -90,16 +90,20 @@ a {
 
 .hero-grid {
   grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+  grid-template-areas:
+    "title title"
+    "details visual";
   align-items: start;
   gap: 48px;
 }
 
 .hero-copy {
-  grid-column: 1 / -1;
+  grid-area: title;
   max-width: 980px;
 }
 
 .hero-details {
+  grid-area: details;
   max-width: 560px;
 }
 
@@ -118,8 +122,9 @@ a {
 }
 
 .hero-visual {
+  grid-area: visual;
   max-width: 560px;
-  justify-self: stretch;
+  justify-self: end;
   margin-top: 4px;
 }
 
@@ -312,6 +317,13 @@ pre code {
 
   .nav-links {
     gap: 12px;
+  }
+
+  .hero-grid {
+    grid-template-areas:
+      "title"
+      "details"
+      "visual";
   }
 
   .hero-copy,
