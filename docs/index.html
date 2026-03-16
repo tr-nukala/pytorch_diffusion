@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyTorch Diffusion Demo</title>
+    <meta
+      name="description"
+      content="A minimal PyTorch DDPM tutorial that teaches diffusion models through MNIST denoising."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <span class="eyebrow">PyTorch Diffusion Demo</span>
+          <div class="nav-links">
+            <a href="https://github.com/tr-nukala/pytorch_diffusion">GitHub</a>
+            <a href="https://github.com/tr-nukala/pytorch_diffusion/releases/latest">Latest release</a>
+            <a href="https://github.com/tr-nukala/pytorch_diffusion/blob/main/notebooks/Diffusion_Demo_Clean.ipynb">Notebook</a>
+          </div>
+        </nav>
+
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="hero-kicker">Diffusion models, explained visually</p>
+            <h1>Learn DDPMs through a compact PyTorch diffusion demo.</h1>
+            <p class="hero-text">
+              This project is a minimal, educational diffusion demo built for students,
+              researchers, and anyone who wants to understand how denoising diffusion
+              probabilistic models work without digging through a giant training stack.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://github.com/tr-nukala/pytorch_diffusion">View repository</a>
+              <a class="button button-secondary" href="https://github.com/tr-nukala/pytorch_diffusion/releases/latest/download/unet_denoiser.pth">Download pretrained model</a>
+            </div>
+            <ul class="hero-points">
+              <li>Direct x0 prediction for clearer intuition</li>
+              <li>Apple Silicon, CUDA, and CPU friendly</li>
+              <li>Jupyter notebook walkthrough included</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual card">
+            <img
+              src="./assets/example_input_output_t50.png"
+              alt="Example showing an original MNIST digit, a noisy version, and the model's denoised reconstruction."
+            />
+            <p>Original, noisy input at t=50, and the model reconstruction.</p>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-heading">
+            <p class="section-label">Why this project</p>
+            <h2>A small codebase that still teaches the real ideas.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="card">
+              <h3>Minimal DDPM core</h3>
+              <p>
+                The code focuses on the denoising process instead of framework complexity,
+                making the training loop and scheduler easier to follow.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Notebook-first learning</h3>
+              <p>
+                The included notebook walks through setup, model loading, and sample
+                generation step by step with visual outputs.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Fast experimentation</h3>
+              <p>
+                You can use the pretrained model immediately or retrain from scratch on
+                MNIST in just a few minutes on modern hardware.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split-section">
+          <div class="section-heading">
+            <p class="section-label">Denoising progression</p>
+            <h2>See how reconstruction quality changes across noise levels.</h2>
+            <p>
+              The pretrained U-Net recovers recognizable digits even after substantial
+              corruption, which makes the notebook a nice playground for understanding
+              the reverse diffusion process.
+            </p>
+          </div>
+          <div class="progress-grid">
+            <figure class="card">
+              <img src="./assets/denoised_digit44_t10.png" alt="Digit denoising result at timestep 10." />
+              <figcaption>t=10: clean reconstruction</figcaption>
+            </figure>
+            <figure class="card">
+              <img src="./assets/denoised_digit44_t30.png" alt="Digit denoising result at timestep 30." />
+              <figcaption>t=30: slight artifacts</figcaption>
+            </figure>
+            <figure class="card">
+              <img src="./assets/denoised_digit44_t50.png" alt="Digit denoising result at timestep 50." />
+              <figcaption>t=50: noisy but recognizable</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section showcase">
+          <div class="showcase-copy">
+            <p class="section-label">What you get</p>
+            <h2>Everything needed to explore the model locally.</h2>
+            <div class="stack">
+              <div class="card">
+                <h3>Quick setup</h3>
+                <pre><code>git clone https://github.com/tr-nukala/pytorch_diffusion.git
+cd pytorch_diffusion
+./setup.sh</code></pre>
+              </div>
+              <div class="card">
+                <h3>Run the notebook</h3>
+                <pre><code>source venv/bin/activate
+jupyter lab notebooks/Diffusion_Demo_Clean.ipynb</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="card image-panel">
+            <img
+              src="./assets/denoised_progression_padded.png"
+              alt="A collage showing denoising progression across multiple samples."
+            />
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="section-label">Project links</p>
+            <h2>Use the repo as a tutorial, demo, or starting point.</h2>
+          </div>
+          <div class="link-grid">
+            <a class="link-card" href="https://github.com/tr-nukala/pytorch_diffusion">
+              <span>Repository</span>
+              <strong>Browse code and docs</strong>
+            </a>
+            <a class="link-card" href="https://github.com/tr-nukala/pytorch_diffusion/releases/latest">
+              <span>Releases</span>
+              <strong>Get the pretrained checkpoint</strong>
+            </a>
+            <a class="link-card" href="https://github.com/tr-nukala/pytorch_diffusion/blob/main/notebooks/Diffusion_Demo_Clean.ipynb">
+              <span>Notebook</span>
+              <strong>Follow the guided walkthrough</strong>
+            </a>
+            <a class="link-card" href="https://github.com/tr-nukala/pytorch_diffusion/blob/main/LICENSE">
+              <span>License</span>
+              <strong>MIT licensed for reuse</strong>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
